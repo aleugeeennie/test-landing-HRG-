@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HRG Seguros · Seguro Hombre Clave — Registro al evento empresarial</title>
+<meta name="description" content="Evento empresarial sin costo. Conoce cómo el Seguro Hombre Clave de HRG Seguros blinda tu operación y tus finanzas ante la ausencia de un colaborador estratégico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================================================== FONDO / AURORA -->
+<div class="bg-stage" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- progreso de scroll -->
+<div class="scroll-progress" id="progress" aria-hidden="true"></div>
+
+<!-- cursor custom -->
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ===================================================== NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="#top" data-cursor aria-label="HRG Seguros">
+      <img src="assets/hrg-white.png" alt="HRG Seguros">
+    </a>
+    <div class="nav-links">
+      <a href="#reto" data-cursor>El reto</a>
+      <a href="#solucion" data-cursor>La solución</a>
+      <a href="#beneficios" data-cursor>Beneficios</a>
+      <a href="#registro" data-cursor>Registro</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#registro" class="btn btn-primary" data-cursor>Registrar a mi empresa</a>
+      <button class="nav-burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- menú móvil -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#reto">El reto</a>
+  <a href="#solucion">La solución</a>
+  <a href="#beneficios">Beneficios</a>
+  <a href="#registro">Registro</a>
+  <a href="#registro" class="btn btn-primary btn-block">Registrar a mi empresa</a>
+</div>
+
+<span id="top"></span>
+
+<!-- ===================================================== HERO -->
+<header class="hero" data-screen-label="Hero">
+  <div class="hero-video-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80">
+      <source src="https://videos.pexels.com/video-files/7147921/7147921-uhd_3840_2160_25fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap hero-content">
+    <div class="hero-grid">
+    <!-- columna texto -->
+    <div class="hero-copy">
+      <div class="hero-badge reveal">
+        <span class="dot"></span>
+        Evento empresarial sin costo · Cupo limitado
+      </div>
+      <h1 class="h-xl reveal d1">
+        Protege el <span class="grad-text">motor</span> que impulsa el crecimiento de tu empresa.
+      </h1>
+      <p class="lead reveal d2">
+        Conoce cómo el <strong style="color:#fff;font-weight:600">Seguro Hombre Clave</strong> blinda tu operación
+        y tus finanzas ante la ausencia de un colaborador estratégico.
+      </p>
+      <div class="hero-actions reveal d3">
+        <a href="#registro" class="btn btn-primary btn-lg" data-cursor>Registrar a mi empresa</a>
+        <a href="#solucion" class="btn btn-ghost btn-lg" data-cursor>Conocer el programa</a>
+      </div>
+      <div class="hero-proof reveal d4">
+        <span>HRG Seguros · Tu aliado estratégico en cada decisión.</span>
+        <span class="sep"></span>
+        <span class="backed">
+          <span>Respaldado por</span>
+          <img src="assets/metlife-white.png" alt="MetLife">
+        </span>
+      </div>
+    </div>
+
+    <!-- columna formulario (above the fold) -->
+    <aside class="form-card glass reveal d2 spotlight" id="registro" data-screen-label="Formulario de registro">
+      <span class="cupo">● Cupo limitado</span>
+      <h3>Aparta el lugar de tu empresa.</h3>
+      <p class="pitch">Completa el registro y recibe por correo la confirmación con los datos de acceso al evento.</p>
+      <form id="leadForm" class="lead-form" novalidate>
+        <div class="field">
+          <label for="empresa">Nombre de la empresa <span class="req">*</span></label>
+          <input type="text" id="empresa" name="empresa" placeholder="Ej. Grupo Industrial del Norte" required>
+          <span class="err">Indícanos el nombre de tu empresa.</span>
+        </div>
+        <div class="field">
+          <label for="responsable">Nombre completo del responsable <span class="req">*</span></label>
+          <input type="text" id="responsable" name="responsable" placeholder="Nombre y apellido" required>
+          <span class="err">Escribe el nombre del responsable.</span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="cargo">Cargo / Puesto <span class="req">*</span></label>
+            <select id="cargo" name="cargo" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>Dirección general</option>
+              <option>Finanzas</option>
+              <option>Recursos Humanos</option>
+              <option>Dueño / Socio</option>
+              <option>Otro</option>
+            </select>
+            <span class="err">Selecciona tu cargo.</span>
+          </div>
+          <div class="field">
+            <label for="colaboradores">N.º de colaboradores <span class="req">*</span></label>
+            <select id="colaboradores" name="colaboradores" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>1 – 10</option>
+              <option>11 – 50</option>
+              <option>51 – 200</option>
+              <option>+200</option>
+            </select>
+            <span class="err">Selecciona un rango.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="correo">Correo corporativo <span class="req">*</span></label>
+          <input type="email" id="correo" name="correo" placeholder="nombre@empresa.com" required>
+          <span class="err">Escribe un correo válido.</span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="55 0000 0000" required>
+            <span class="err">Comparte un teléfono de contacto.</span>
+          </div>
+          <div class="field">
+            <label for="asistentes">Asistentes <span style="color:var(--faint);font-weight:500">(opcional)</span></label>
+            <input type="number" id="asistentes" name="asistentes" min="1" placeholder="Ej. 2">
+            <span class="err"></span>
+          </div>
+        </div>
+        <label class="consent" id="consentWrap">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>Acepto los <a href="#" data-cursor>términos y condiciones</a> y autorizo que me contacten con información relacionada a mi solicitud.</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" data-cursor>Confirmar mi registro</button>
+      </form>
+    </aside>
+    </div>
+  </div>
+</header>
+
+<!-- ===================================================== MARQUEE -->
+<section class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span class="item"><span class="star">✦</span> Liquidez inmediata</span>
+    <span class="item"><span class="star">✦</span> Continuidad sin pausas</span>
+    <span class="item"><span class="star">✦</span> Esquema deducible*</span>
+    <span class="item"><span class="star">✦</span> Ahorro + rendimiento*</span>
+    <span class="item"><span class="star">✦</span> Retención de talento clave</span>
+    <span class="item"><span class="star">✦</span> Respaldado por MetLife</span>
+  </div>
+</section>
+
+<!-- ===================================================== EL RETO -->
+<section class="section-pad wrap" id="reto" data-screen-label="El reto">
+  <div class="section-head reveal">
+    <span class="eyebrow">El reto</span>
+    <h2 class="h-lg" style="margin-top:18px">¿Qué pasa en tu empresa si falta un colaborador clave?</h2>
+    <p class="lead">El fallecimiento o la incapacidad de un directivo, socio o talento estratégico puede frenar tu operación de un día para otro.</p>
+  </div>
+
+  <div class="risk-grid">
+    <article class="risk-card reveal spotlight">
+      <div class="ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bff0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 7h6v6"/></svg>
+      </div>
+      <div class="risk-num">RIESGO 01</div>
+      <p>Pérdida de ingresos y productividad.</p>
+    </article>
+    <article class="risk-card reveal d1 spotlight">
+      <div class="ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bff0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      </div>
+      <div class="risk-num">RIESGO 02</div>
+      <p>Retrasos en proyectos estratégicos.</p>
+    </article>
+    <article class="risk-card reveal d2 spotlight">
+      <div class="ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bff0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6"/></svg>
+      </div>
+      <div class="risk-num">RIESGO 03</div>
+      <p>Costos de reclutamiento y capacitación.</p>
+    </article>
+    <article class="risk-card reveal d3 spotlight">
+      <div class="ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bff0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div class="risk-num">RIESGO 04</div>
+      <p>Impacto en la confianza de clientes y socios.</p>
+    </article>
+    <article class="risk-card reveal d4 spotlight">
+      <div class="ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bff0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+      </div>
+      <div class="risk-num">RIESGO 05</div>
+      <p>Riesgo para la continuidad del negocio.</p>
+    </article>
+    <article class="risk-card reveal d5 spotlight" style="background:linear-gradient(135deg,rgba(0,160,224,.12),rgba(160,208,80,.08));border-color:rgba(0,160,224,.28)">
+      <div class="risk-num" style="color:var(--green-soft)">PREVENCIÓN</div>
+      <p style="font-family:var(--font-display);font-weight:600">Identifícalos hoy y conviértelos en una ventaja competitiva.</p>
+    </article>
+  </div>
+
+  <div class="insight reveal">
+    <span class="qmark" aria-hidden="true">”</span>
+    <p>Las empresas exitosas identifican estos riesgos y los convierten en una <strong>oportunidad de prevención.</strong></p>
+  </div>
+</section>
+
+<!-- ===================================================== LA SOLUCIÓN -->
+<section class="section-pad wrap" id="solucion" data-screen-label="La solución">
+  <div class="section-head reveal">
+    <span class="eyebrow">La solución</span>
+    <h2 class="h-lg" style="margin-top:18px">Seguro Hombre Clave: respaldo financiero cuando más lo necesitas.</h2>
+  </div>
+
+  <div class="sol-grid">
+    <article class="sol-card reveal spotlight" style="--c:var(--cyan)" data-cursor>
+      <div class="sol-num">01</div>
+      <div class="sol-ico" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      </div>
+      <h3>Liquidez inmediata para tu operación</h3>
+      <p>Si un colaborador clave llega a faltar, tu empresa recibe recursos económicos para mantener la operación, cubrir compromisos y financiar la transición.</p>
+    </article>
+    <article class="sol-card reveal d1 spotlight" style="--c:var(--peri-500)" data-cursor>
+      <div class="sol-num">02</div>
+      <div class="sol-ico" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0115.5-6.3M21 12a9 9 0 01-15.5 6.3"/><path d="M18 3v3h-3M6 21v-3h3"/></svg>
+      </div>
+      <h3>Continuidad sin pausas</h3>
+      <p>Facilita la incorporación de un reemplazo y protege los proyectos en marcha para que la ausencia no detenga tu crecimiento.</p>
+    </article>
+    <article class="sol-card reveal d2 spotlight" style="--c:var(--green)" data-cursor>
+      <div class="sol-num">03</div>
+      <div class="sol-ico" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8v6a8 8 0 01-16 0V8"/><path d="M12 2a4 4 0 014 4v2H8V6a4 4 0 014-4z"/><path d="M9 14l2 2 4-4"/></svg>
+      </div>
+      <h3>Un beneficio que fortalece tu cultura <span style="color:var(--green-soft);font-size:.8em">(Seguro Colectivo)</span></h3>
+      <p>Proteger a tus colaboradores refuerza el sentido de pertenencia, mejora tu propuesta de valor para el talento y construye una organización más sólida y competitiva.</p>
+    </article>
+  </div>
+
+  <div style="text-align:center;margin-top:clamp(36px,5vw,52px)" class="reveal">
+    <a href="#registro" class="btn btn-primary btn-lg" data-cursor>Registrar a mi empresa</a>
+  </div>
+</section>
+
+<!-- ===================================================== BENEFICIOS -->
+<section class="section-pad wrap" id="beneficios" data-screen-label="Beneficios">
+  <div class="ben-wrap">
+    <div class="ben-aside reveal">
+      <div class="glass">
+        <div class="ben-stat" data-count="100" data-suffix="%">0%</div>
+        <p class="lbl">enfocado en proteger lo que sostiene a tu empresa: su gente clave.</p>
+        <div class="divline"></div>
+        <div class="ben-mini">
+          <div>
+            <div class="num" data-count="4" data-suffix="">0</div>
+            <div class="t">Beneficios clave</div>
+          </div>
+          <div>
+            <div class="num">1</div>
+            <div class="t">Asesoría a medida</div>
+          </div>
+          <div>
+            <div class="num">B2B</div>
+            <div class="t">Para empresas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ben-copy">
+      <div class="section-head reveal" style="margin-bottom:30px">
+        <span class="eyebrow">Beneficios para tu empresa</span>
+        <h2 class="h-lg" style="margin-top:18px">Un instrumento financiero que impulsa la economía de tu empresa.</h2>
+      </div>
+      <div class="ben-list">
+        <div class="ben-item reveal spotlight">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#bce06f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></div>
+          <div><h4>Ventaja fiscal</h4><p>Esquema deducible para la empresa conforme a la normativa fiscal vigente.*</p></div>
+        </div>
+        <div class="ben-item reveal d1 spotlight">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#bce06f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
+          <div><h4>Ahorro + rendimiento</h4><p>Si el asegurado vive al término del plan, la empresa puede recuperar parte de sus aportaciones más el rendimiento, según el plazo y el plan.*</p></div>
+        </div>
+        <div class="ben-item reveal d2 spotlight">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#bce06f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div><h4>Retención de talento estratégico</h4><p>Forma parte de una estrategia integral de protección para tus colaboradores clave.</p></div>
+        </div>
+        <div class="ben-item reveal d3 spotlight">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#bce06f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div>
+          <div><h4>Protección financiera</h4><p>Proporciona liquidez para afrontar compromisos económicos importantes.</p></div>
+        </div>
+      </div>
+      <p class="disclaimer reveal">*Las coberturas, los beneficios fiscales y los montos de recuperación dependen del plan y del perfil de cada empresa, y se detallan en una asesoría personalizada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== TESTIMONIALES -->
+<section class="section-pad testimonials" id="testimonios" data-screen-label="Testimoniales">
+  <div class="wrap">
+    <div class="tst-head reveal">
+      <span class="eyebrow">Testimoniales</span>
+      <h2 class="h-lg">Empresas que ya piensan en continuidad.</h2>
+      <p class="lead" style="margin:16px auto 0">Líderes que entienden que proteger a su gente clave también protege el futuro del negocio.</p>
+    </div>
+
+    <div class="tst-rows" aria-label="Testimonios de clientes">
+      <div class="tst-row to-left" data-loop-row>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Mariana Torres">
+            <div><div class="tst-name">Mariana Torres</div><div class="tst-role">Dirección de Finanzas · Manufactura</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">Nos ayudó a visualizar el impacto real de una ausencia estratégica y a tomar decisiones preventivas con mayor claridad.</p>
+        </article>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Rodrigo Salinas">
+            <div><div class="tst-name">Rodrigo Salinas</div><div class="tst-role">Socio Director · Consultoría</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">La asesoría fue muy puntual. Entendieron la estructura de socios y nos explicaron escenarios sin tecnicismos innecesarios.</p>
+        </article>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" alt="Ana Beltrán">
+            <div><div class="tst-name">Ana Beltrán</div><div class="tst-role">People & Culture · Tecnología</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">Nos dio una forma más seria de hablar de protección, retención y continuidad con dirección general.</p>
+        </article>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" alt="Javier Méndez">
+            <div><div class="tst-name">Javier Méndez</div><div class="tst-role">CEO · Distribución B2B</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">El enfoque fue empresarial, claro y accionable. Salimos con una ruta mucho más ordenada para proteger posiciones críticas.</p>
+        </article>
+      </div>
+
+      <div class="tst-row to-right" data-loop-row>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=160&q=80" alt="Carlos Rivas">
+            <div><div class="tst-name">Carlos Rivas</div><div class="tst-role">Dirección Comercial · Logística</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">Nos ayudó a bajar el tema de riesgo a números, operación y continuidad. Eso hizo mucho más fácil presentarlo internamente.</p>
+        </article>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=160&q=80" alt="Lucía Garza">
+            <div><div class="tst-name">Lucía Garza</div><div class="tst-role">Recursos Humanos · Servicios</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">La explicación fue muy humana y estratégica. No se sintió como una venta, sino como una planeación responsable.</p>
+        </article>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Miguel Herrera">
+            <div><div class="tst-name">Miguel Herrera</div><div class="tst-role">Director General · Construcción</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">Nos permitió anticipar un riesgo que normalmente no se conversa hasta que ya es demasiado tarde.</p>
+        </article>
+        <article class="tst-card spotlight">
+          <div class="tst-top">
+            <img class="tst-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" alt="Sofía Jiménez">
+            <div><div class="tst-name">Sofía Jiménez</div><div class="tst-role">Administración · Empresa familiar</div></div>
+            <div class="tst-stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="tst-quote">El proceso fue claro desde el inicio. Nos dejó una perspectiva mucho más completa sobre sucesión y protección financiera.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== CTA FINAL -->
+<section class="section-pad wrap" id="registro-final" data-screen-label="Registro final">
+  <div class="reg-final">
+    <div class="reg-copy reveal">
+      <span class="eyebrow">Registro</span>
+      <h2 class="h-lg">Aparta el lugar de tu empresa.</h2>
+      <p class="lead">Completa el formulario y recibe por correo la confirmación con los datos de acceso al evento.</p>
+      <ul class="reg-points" aria-label="Beneficios del registro">
+        <li><span class="tick">✓</span> Evento empresarial sin costo.</li>
+        <li><span class="tick">✓</span> Cupo limitado para empresas.</li>
+        <li><span class="tick">✓</span> Asesoría enfocada en continuidad de negocio.</li>
+      </ul>
+    </div>
+
+    <aside class="form-card glass reveal d1 spotlight" data-screen-label="Formulario final">
+      <span class="cupo">● Cupo limitado</span>
+      <h3>Confirma tu registro.</h3>
+      <p class="pitch">Déjanos tus datos para enviarte la información del evento y el seguimiento correspondiente.</p>
+      <form id="leadFormBottom" class="lead-form" novalidate>
+        <div class="field">
+          <label for="empresaBottom">Nombre de la empresa <span class="req">*</span></label>
+          <input type="text" id="empresaBottom" name="empresa" placeholder="Ej. Grupo Industrial del Norte" required>
+          <span class="err">Indícanos el nombre de tu empresa.</span>
+        </div>
+        <div class="field">
+          <label for="responsableBottom">Nombre completo del responsable <span class="req">*</span></label>
+          <input type="text" id="responsableBottom" name="responsable" placeholder="Nombre y apellido" required>
+          <span class="err">Escribe el nombre del responsable.</span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="cargoBottom">Cargo / Puesto <span class="req">*</span></label>
+            <select id="cargoBottom" name="cargo" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>Dirección general</option>
+              <option>Finanzas</option>
+              <option>Recursos Humanos</option>
+              <option>Dueño / Socio</option>
+              <option>Otro</option>
+            </select>
+            <span class="err">Selecciona tu cargo.</span>
+          </div>
+          <div class="field">
+            <label for="colaboradoresBottom">N.º de colaboradores <span class="req">*</span></label>
+            <select id="colaboradoresBottom" name="colaboradores" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>1 – 10</option>
+              <option>11 – 50</option>
+              <option>51 – 200</option>
+              <option>+200</option>
+            </select>
+            <span class="err">Selecciona un rango.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="correoBottom">Correo corporativo <span class="req">*</span></label>
+          <input type="email" id="correoBottom" name="correo" placeholder="nombre@empresa.com" required>
+          <span class="err">Escribe un correo válido.</span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="telefonoBottom">Teléfono / WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="telefonoBottom" name="telefono" placeholder="55 0000 0000" required>
+            <span class="err">Comparte un teléfono de contacto.</span>
+          </div>
+          <div class="field">
+            <label for="asistentesBottom">Asistentes <span style="color:var(--faint);font-weight:500">(opcional)</span></label>
+            <input type="number" id="asistentesBottom" name="asistentes" min="1" placeholder="Ej. 2">
+            <span class="err"></span>
+          </div>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="consentBottom" name="consent" required>
+          <span>Acepto los <a href="#" data-cursor>términos y condiciones</a> y autorizo que me contacten con información relacionada a mi solicitud.</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" data-cursor>Confirmar mi registro</button>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================================================== FOOTER -->
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img class="footer-logo" src="assets/hrg-white.png" alt="HRG Seguros">
+        <p style="max-width:34ch">Tu aliado estratégico en cada decisión. Protección financiera y continuidad de negocio para empresas.</p>
+        <div class="backed">
+          <span>Respaldado por</span>
+          <img src="assets/metlife-white.png" alt="MetLife" style="height:20px">
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <a href="#reto" data-cursor>El reto</a>
+        <a href="#solucion" data-cursor>La solución</a>
+        <a href="#beneficios" data-cursor>Beneficios</a>
+        <a href="#registro" data-cursor>Registro</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <p>Calle Malinche 8, 52169 San Jorge Pueblo Nuevo, Edo. de México, México.</p>
+        <a href="tel:5580302272" data-cursor>Tel. 55 8030 2272</a>
+        <a href="mailto:prospeccion@hrgseguros.com.mx" data-cursor>prospeccion@hrgseguros.com.mx</a>
+        <a href="https://wa.me/525580302272" target="_blank" rel="noopener" data-cursor>WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HRG Seguros. Todos los derechos reservados.</span>
+      <span style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="#" data-cursor>Aviso de privacidad</a>
+        <a href="#" data-cursor>Términos y condiciones</a>
+      </span>
+      <span>Desarrollado por <a href="https://dinametra.com/" target="_blank" rel="noopener" data-cursor>Dinametra.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-float" href="https://wa.me/525580302272" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" data-cursor>
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 .5C7.5.5.6 7.4.6 15.9c0 2.8.7 5.4 2.1 7.8L.4 31.6l8.1-2.1c2.3 1.3 4.9 1.9 7.5 1.9 8.5 0 15.4-6.9 15.4-15.4S24.5.5 16 .5zm0 28c-2.4 0-4.7-.6-6.7-1.9l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.4-2.1-2.1-4.6-2.1-7.1C2.9 8.7 8.8 2.9 16 2.9S29.1 8.7 29.1 15.9 23.2 28.5 16 28.5zm7.2-9.4c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.2 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
