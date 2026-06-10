@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HRG Seguros · Seguro Hombre Clave — Registro al evento empresarial</title>
-<meta name="description" content="Evento empresarial sin costo. Conoce cómo el Seguro Hombre Clave de HRG Seguros blinda tu operación y tus finanzas ante la ausencia de un colaborador estratégico.">
+<title>HRG Seguros · Solicitud de asesoría empresarial</title>
+<meta name="description" content="Completa el registro y un asesor de HRG Seguros te contactará para conocer tus necesidades y presentarte una solución a la medida.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,10 +40,10 @@
       <a href="#reto" data-cursor>El reto</a>
       <a href="#solucion" data-cursor>La solución</a>
       <a href="#beneficios" data-cursor>Beneficios</a>
-      <a href="#registro" data-cursor>Registro</a>
+      <a href="#registro" data-cursor>Asesoría</a>
     </div>
     <div class="nav-cta">
-      <a href="#registro" class="btn btn-primary" data-cursor>Registrar a mi empresa</a>
+      <a href="#registro" class="btn btn-primary" data-cursor>Solicitar asesoría</a>
       <button class="nav-burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -56,8 +56,8 @@
   <a href="#reto">El reto</a>
   <a href="#solucion">La solución</a>
   <a href="#beneficios">Beneficios</a>
-  <a href="#registro">Registro</a>
-  <a href="#registro" class="btn btn-primary btn-block">Registrar a mi empresa</a>
+  <a href="#registro">Asesoría</a>
+  <a href="#registro" class="btn btn-primary btn-block">Solicitar asesoría</a>
 </div>
 
 <span id="top"></span>
@@ -75,7 +75,7 @@
     <div class="hero-copy">
       <div class="hero-badge reveal">
         <span class="dot"></span>
-        Evento empresarial sin costo · Cupo limitado
+        Asesoría personalizada · Soluciones a la medida
       </div>
       <h1 class="h-xl reveal d1">
         Protege el <span class="grad-text">motor</span> que impulsa el crecimiento de tu empresa.
@@ -85,7 +85,7 @@
         y tus finanzas ante la ausencia de un colaborador estratégico.
       </p>
       <div class="hero-actions reveal d3">
-        <a href="#registro" class="btn btn-primary btn-lg" data-cursor>Registrar a mi empresa</a>
+        <a href="#registro" class="btn btn-primary btn-lg" data-cursor>Solicitar asesoría</a>
         <a href="#solucion" class="btn btn-ghost btn-lg" data-cursor>Conocer el programa</a>
       </div>
       <div class="hero-proof reveal d4">
@@ -99,10 +99,9 @@
     </div>
 
     <!-- columna formulario (above the fold) -->
-    <aside class="form-card glass reveal d2 spotlight" id="registro" data-screen-label="Formulario de registro">
-      <span class="cupo">● Cupo limitado</span>
-      <h3>Aparta el lugar de tu empresa.</h3>
-      <p class="pitch">Completa el registro y recibe por correo la confirmación con los datos de acceso al evento.</p>
+    <aside class="form-card glass reveal d2 spotlight" id="registro" data-screen-label="Formulario de solicitud">
+      <h3>Solicita información para proteger tu empresa.</h3>
+      <p class="pitch">Completa el registro y un asesor de HRG Seguros te contactará para conocer tus necesidades y presentarte una solución a la medida.</p>
       <form id="leadForm" class="lead-form" novalidate>
         <div class="field">
           <label for="empresa">Nombre de la empresa <span class="req">*</span></label>
@@ -144,23 +143,21 @@
           <input type="email" id="correo" name="correo" placeholder="nombre@empresa.com" required>
           <span class="err">Escribe un correo válido.</span>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
-            <input type="tel" id="telefono" name="telefono" placeholder="55 0000 0000" required>
-            <span class="err">Comparte un teléfono de contacto.</span>
-          </div>
-          <div class="field">
-            <label for="asistentes">Asistentes <span style="color:var(--faint);font-weight:500">(opcional)</span></label>
-            <input type="number" id="asistentes" name="asistentes" min="1" placeholder="Ej. 2">
-            <span class="err"></span>
-          </div>
+        <div class="field">
+          <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
+          <input type="tel" id="telefono" name="telefono" placeholder="55 0000 0000" required>
+          <span class="err">Comparte un teléfono de contacto.</span>
         </div>
-        <label class="consent" id="consentWrap">
+        <div class="field">
+          <label for="comentarios">Comentarios adicionales <span style="color:var(--faint);font-weight:500">(opcional)</span></label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Ej. Quiero información sobre seguro empresarial, vida, retiro o gastos médicos."></textarea>
+          <span class="err"></span>
+        </div>
+        <label class="consent">
           <input type="checkbox" id="consent" name="consent" required>
-          <span>Acepto los <a href="#" data-cursor>términos y condiciones</a> y autorizo que me contacten con información relacionada a mi solicitud.</span>
+          <span>Acepto los <a href="#" data-cursor>términos y condiciones</a> y autorizo que HRG Seguros me contacte con información relacionada a mi solicitud.</span>
         </label>
-        <button type="submit" class="btn btn-primary btn-lg btn-block" data-cursor>Confirmar mi registro</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" data-cursor>Solicitar asesoría</button>
       </form>
     </aside>
     </div>
@@ -270,7 +267,7 @@
   </div>
 
   <div style="text-align:center;margin-top:clamp(36px,5vw,52px)" class="reveal">
-    <a href="#registro" class="btn btn-primary btn-lg" data-cursor>Registrar a mi empresa</a>
+    <a href="#registro" class="btn btn-primary btn-lg" data-cursor>Solicitar asesoría</a>
   </div>
 </section>
 
@@ -414,20 +411,14 @@
 <section class="section-pad wrap" id="registro-final" data-screen-label="Registro final">
   <div class="reg-final">
     <div class="reg-copy reveal">
-      <span class="eyebrow">Registro</span>
-      <h2 class="h-lg">Aparta el lugar de tu empresa.</h2>
-      <p class="lead">Completa el formulario y recibe por correo la confirmación con los datos de acceso al evento.</p>
-      <ul class="reg-points" aria-label="Beneficios del registro">
-        <li><span class="tick">✓</span> Evento empresarial sin costo.</li>
-        <li><span class="tick">✓</span> Cupo limitado para empresas.</li>
-        <li><span class="tick">✓</span> Asesoría enfocada en continuidad de negocio.</li>
-      </ul>
+      <span class="eyebrow">Asesoría</span>
+      <h2 class="h-lg">Solicita información para proteger tu empresa.</h2>
+      <p class="lead">Completa el registro y un asesor de HRG Seguros te contactará para conocer tus necesidades y presentarte una solución a la medida.</p>
     </div>
 
     <aside class="form-card glass reveal d1 spotlight" data-screen-label="Formulario final">
-      <span class="cupo">● Cupo limitado</span>
-      <h3>Confirma tu registro.</h3>
-      <p class="pitch">Déjanos tus datos para enviarte la información del evento y el seguimiento correspondiente.</p>
+      <h3>Solicita información para proteger tu empresa.</h3>
+      <p class="pitch">Completa el registro y un asesor de HRG Seguros te contactará para conocer tus necesidades y presentarte una solución a la medida.</p>
       <form id="leadFormBottom" class="lead-form" novalidate>
         <div class="field">
           <label for="empresaBottom">Nombre de la empresa <span class="req">*</span></label>
@@ -469,23 +460,21 @@
           <input type="email" id="correoBottom" name="correo" placeholder="nombre@empresa.com" required>
           <span class="err">Escribe un correo válido.</span>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="telefonoBottom">Teléfono / WhatsApp <span class="req">*</span></label>
-            <input type="tel" id="telefonoBottom" name="telefono" placeholder="55 0000 0000" required>
-            <span class="err">Comparte un teléfono de contacto.</span>
-          </div>
-          <div class="field">
-            <label for="asistentesBottom">Asistentes <span style="color:var(--faint);font-weight:500">(opcional)</span></label>
-            <input type="number" id="asistentesBottom" name="asistentes" min="1" placeholder="Ej. 2">
-            <span class="err"></span>
-          </div>
+        <div class="field">
+          <label for="telefonoBottom">Teléfono / WhatsApp <span class="req">*</span></label>
+          <input type="tel" id="telefonoBottom" name="telefono" placeholder="55 0000 0000" required>
+          <span class="err">Comparte un teléfono de contacto.</span>
+        </div>
+        <div class="field">
+          <label for="comentariosBottom">Comentarios adicionales <span style="color:var(--faint);font-weight:500">(opcional)</span></label>
+          <textarea id="comentariosBottom" name="comentarios" rows="4" placeholder="Ej. Quiero información sobre seguro empresarial, vida, retiro o gastos médicos."></textarea>
+          <span class="err"></span>
         </div>
         <label class="consent">
           <input type="checkbox" id="consentBottom" name="consent" required>
-          <span>Acepto los <a href="#" data-cursor>términos y condiciones</a> y autorizo que me contacten con información relacionada a mi solicitud.</span>
+          <span>Acepto los <a href="#" data-cursor>términos y condiciones</a> y autorizo que HRG Seguros me contacte con información relacionada a mi solicitud.</span>
         </label>
-        <button type="submit" class="btn btn-primary btn-lg btn-block" data-cursor>Confirmar mi registro</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" data-cursor>Solicitar asesoría</button>
       </form>
     </aside>
   </div>
@@ -508,7 +497,7 @@
         <a href="#reto" data-cursor>El reto</a>
         <a href="#solucion" data-cursor>La solución</a>
         <a href="#beneficios" data-cursor>Beneficios</a>
-        <a href="#registro" data-cursor>Registro</a>
+        <a href="#registro" data-cursor>Asesoría</a>
       </div>
       <div class="footer-col">
         <h5>Contacto</h5>

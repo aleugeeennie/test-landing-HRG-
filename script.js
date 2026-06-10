@@ -131,7 +131,7 @@
       requestAnimationFrame(loop);
     };
     loop();
-    const hot = '[data-cursor], a, button, input, select, label';
+    const hot = '[data-cursor], a, button, input, select, textarea, label';
     document.addEventListener('mouseover', e => {
       if (e.target.closest(hot)) ring.classList.add('hover');
     });
@@ -185,7 +185,7 @@
     forms.forEach(form => {
       const consentWrap = form.querySelector('.consent');
 
-      form.querySelectorAll('input,select').forEach(inp => {
+      form.querySelectorAll('input,select,textarea').forEach(inp => {
         inp.addEventListener('blur', () => { if (inp.type !== 'checkbox') check(inp); });
         inp.addEventListener('input', () => {
           const w = fieldOf(inp);
@@ -200,7 +200,7 @@
       form.addEventListener('submit', e => {
         e.preventDefault();
         let valid = true;
-        form.querySelectorAll('input[required],select[required]').forEach(inp => {
+        form.querySelectorAll('input[required],select[required],textarea[required]').forEach(inp => {
           if (inp.type === 'checkbox') return;
           if (!check(inp)) valid = false;
         });
@@ -222,7 +222,7 @@
         }
 
         const btn = form.querySelector('button[type=submit]');
-        btn.textContent = 'Confirmando…';
+        btn.textContent = 'Enviando…';
         btn.disabled = true;
         btn.style.opacity = '.8';
         setTimeout(() => { window.location.href = 'gracias.html'; }, 700);
